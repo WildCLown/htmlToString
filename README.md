@@ -8,6 +8,6 @@ and I am kinda lazy
 
 This text above will be set as:
 
-'I got' +
-'some stuff to do' +
-'and I am kinda lazy' +
+'I got' +\n
+'some stuff to do' +\n
+'and I am kinda lazy' +\n
