@@ -9,7 +9,7 @@
             id="inputfile"> 
     <br> 
    
-    <textarea id="output"></textarea> 
+    <textarea id="output" style="width: 50%; height: 500px;"></textarea> 
       
     <script type="text/javascript">
         document.getElementById('inputfile') 
@@ -20,11 +20,13 @@
                 var aux = fr.result.split("\n");
                 var returnFile = "";
                 for(var i = 0; i<aux.length;i++){
-                  aux[i] = aux[i].slice(0,-1);
-                  console.log("This is: " + aux[i].charCodeAt(aux[i].length - 1));
                    if(i != aux.length -1 ){
-                     returnFile += "'" + aux[i] + "'+\n";
+                      aux[i] = aux[i].slice(0,-1);
+                      if(aux[i] != ''){
+                        returnFile += "'" + aux[i] + "'+\n";
+                     }
                    }else{
+                      if(aux[i] != '')
                      returnFile += "'" + aux[i] + "'";
                    }
                   }
